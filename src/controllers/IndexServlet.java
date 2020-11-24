@@ -51,7 +51,6 @@ public class IndexServlet extends HttpServlet {
         long messages_count = (long)em.createNamedQuery("getMessagesCount", Long.class)
                                       .getSingleResult();
 
-        em.close();
 
         request.setAttribute("messages", messages);
         request.setAttribute("messages_count", messages_count);     // 全件数
